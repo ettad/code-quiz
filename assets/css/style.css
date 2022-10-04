@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header button {
+    border: none;
+    background: transparent;
+    color: black;
+}
+
+.banner {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    margin: 10px 20px;
+}
+
+.container {
+    width: 400px;
+    margin: 20vh auto;
+    text-align: center;
+}
+
