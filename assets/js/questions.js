@@ -5,14 +5,14 @@ const questions = [
         correct: 'Hyper Text Markup Language'
     },
     {
-        question: "How can you make a numbered list?",
-        answers: ['&lt ol &gt','&ltul&gt','&ltdl&gt'],
-        correct: "&lt ol &gt"
+        question: "Which property is used to change the font of an element?",
+        answers: ['font-family','font-style','font-weight'],
+        correct: 'font-family'
     },
     {
-        question: "What is the correct HTML for making a checkbox?",
-        answers: ['&ltcheckbox&gt','&ltinput type="checkbox"&gt','&ltinput type="check"&gt'],
-        correct: '&ltinput type="checkbox"&gt'
+        question: "Who is making the Web standards?",
+        answers: ['Mozilla','The World Wide Web Consortium','Google'],
+        correct: 'The World Wide Web Consortium'
     },
     {
         question: "Which property is used to change the background color?",
@@ -20,8 +20,8 @@ const questions = [
         correct: 'background-corl'
     }, 
     {
-        question: "Inside which HTML element do we put the Java Script?",
-        answers: ['&ltjavascript&gt','&ltscript&gt','&ltjs&gt'],
-        correct: '&ltscript&gt'
+        question: "Where is the correct place to insert a JavaScript?",
+        answers: ['The head secton','The body section','Both the head section and body section are correct'],
+        correct: 'Both the head section and body section are correct'
     }
 ]
