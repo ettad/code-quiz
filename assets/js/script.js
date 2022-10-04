@@ -1,8 +1,8 @@
 let clockId;
-let time = 10;
+let time = 30;
 let i=0;
 let correctAns=0;
-//let totalanswered=0;
+let totalanswered=0;
 
 document.querySelector('.start').addEventListener('click', handleStart);
 
@@ -17,7 +17,7 @@ function clock() {
     if (time<1) {
         clearInterval(clockId);
         document.querySelector('.time').innerText = 0;
-        finishQuiz();
+        // finishQuiz();
     };
     time--;
 }
@@ -43,7 +43,6 @@ function showQuestions() {
 
 document.addEventListener('click',(e)=>{
     if(e.target && e.target.id == 'choices') {
-        var totalanswered=0
         totalanswered++;
         if(e.target.innerText != questions[i].correct){
             time -= 10;
@@ -59,8 +58,19 @@ document.addEventListener('click',(e)=>{
 
 
 function finishQuiz() {
+    document.querySelector('header').style.display = 'none';
     document.querySelector(".container").innerHTML = `
-    <h2>QUIZ OVER</h2> `
+    <h2>All Done!</h2>
+    <p> Your final score is ${(correctAns/totalanswered)*100}%<p>
+    <p> Enter your initials TT <p> `
+
+    console.log(totalanswered);
+    console.log(correctAns);
 }
 
 
+
+// To do -- add code to finishQuiz function
+// 1. save initial and high score 
+// 2. show high score
+// 3. add play again button that calls hadleStart function
