@@ -62,10 +62,12 @@ function finishQuiz() {
     document.querySelector(".container").innerHTML = `
     <h2>All Done!</h2>
     <p> Your final score is ${(correctAns/totalanswered)*100}%<p>
-    <p> Enter your initials TT <p> `
-
-    console.log(totalanswered);
-    console.log(correctAns);
+    <form>
+        <label for="initials">Enter your initials: </label><br>
+        <input type="text" id="initials" name="initials">
+    <form>
+    
+    `
 }
 
 
