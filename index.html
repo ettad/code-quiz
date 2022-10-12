@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code Quiz</title>
 </head>
 <body>
+    <!--header for HighScores and Time-->
    <header>
-       <button class="score">View Highscore</button>
-       <h3 >Time: <span class="time"></span> </h3>
+       <button class="highScore button">View Highscore</button>
+       <h3 class="button">Time: <span class="time">60</span> <span>sec</span> </h3>
    </header> 
-
+   <!--display instruction for quiz-->
    <div class="banner">
-       <h1>Coding Quiz Challenge</h1>
-       <p>Try to answer the following code ...</p>
+       <h1>Coding Quiz</h1>
+       <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by ten seconds!</p>
        
-       <button class="start">Start Quiz</button>
+       <button class="start button">Start Quiz</button>
    </div>
 
-   <div class="container">
-    
+   <div class="container" id="container">
+    <!--all content that script.js creates goes here-->
    </div>
+
+   <footer>
+    <button class="retakeQuiz button">Retake Quiz</button>
+    <button class="clearHighScore button">Clear Highscore</button>
+   </footer>
 
    <script src="./assets/js/questions.js"></script>
    <script src="./assets/js/script.js"></script>
+
 </body>
 </html>
