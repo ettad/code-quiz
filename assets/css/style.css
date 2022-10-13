@@ -11,7 +11,7 @@ header button {
 
 .banner {
     width: 50vw;
-    /* height: 30vw; */
+    height: 30vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -54,14 +54,14 @@ button:hover {
 
 .container {
     width: 50vw;
-    height: 40vh;
-    margin: 20vh auto;
+    height: 30vh;
+    padding-left: 5vw;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
-    align-content: center;
-    border: 1px solid black;
+    align-content:flex-start;
     border-radius: 10px;
     background-color: beige;
     text-align: center;
@@ -80,24 +80,13 @@ button:hover {
 
 
 #choices {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /* flex-direction: column; */
     font-size: 1em;
     width: 26vw;
     align-items: center;
 }
 
-
-.playerData {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-.playerData label {
-    font-weight: bold;
-}
 
 form {
     display: block;

@@ -6,7 +6,7 @@ let correctAns=0;
 // hide elements and calls functions on click
 document.querySelector('.container').style.display = 'none';
 document.querySelector('.start').addEventListener('click', handleStart);
-// document.querySelector('.highScore').addEventListener('click', showHighScore);
+document.querySelector('.highScore').addEventListener('click', showHighScore);
 
 function handleStart() {
     document.querySelector('.container').style.display = '';
@@ -142,7 +142,7 @@ function finishQuiz() {
 // gets data from local storage and create list items to display scores
 function showHighScore() {
     document.querySelector('.banner').style.display = 'none';
-
+    document.querySelector('.container').style.display = '';
     var containerEl = document.querySelector('.container');
 
     var highScoreEl = document.createElement('div');
@@ -159,6 +159,7 @@ function showHighScore() {
     if(!savedHighScores) {
         alert("There are no saved scores. Please click Start Quiz")
         document.querySelector('.banner').style.display = '';
+        document.querySelector('.container').style.display = 'none';
         return false;
     }
 

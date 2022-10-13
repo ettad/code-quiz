@@ -16,12 +16,12 @@ const questions = [
     },
     {
         question: "4. Which property is used to change the background color?",
-        answers: ['background-corl','color','bgcolor'],
-        correct: 'background-corl'
+        answers: ['background-color','color','bgcolor'],
+        correct: 'background-color'
     }, 
     {
         question: "5. Where is the correct place to insert a JavaScript?",
-        answers: ['The head secton','The body section','Both the head section and body section are correct'],
-        correct: 'Both the head section and body section are correct'
+        answers: ['The head secton','The body section','Both the head section and body section'],
+        correct: 'Both the head section and body section'
     }
 ]
