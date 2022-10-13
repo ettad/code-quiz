@@ -54,6 +54,7 @@ button:hover {
 
 .container {
     width: 50vw;
+    height: 40vh;
     margin: 20vh auto;
     display: flex;
     flex-wrap: wrap;
@@ -69,11 +70,12 @@ button:hover {
 
 .container h2 {
     color: rgb(0, 0, 0);
-    font-size: 1.5em;
+    font-size: 1.2em;
     display:flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
     flex-direction: column;
+    align-content:flex-start;
 }
 
 
@@ -82,7 +84,9 @@ button:hover {
     flex-direction: column;
     font-size: 1em;
     width: 26vw;
+    align-items: center;
 }
+
 
 .playerData {
     display: flex;

@@ -6,7 +6,7 @@ let correctAns=0;
 // hide elements and calls functions on click
 document.querySelector('.container').style.display = 'none';
 document.querySelector('.start').addEventListener('click', handleStart);
-document.querySelector('.highScore').addEventListener('click', showHighScore);
+// document.querySelector('.highScore').addEventListener('click', showHighScore);
 
 function handleStart() {
     document.querySelector('.container').style.display = '';
@@ -51,9 +51,6 @@ document.addEventListener('click',(e)=>{
     if(e.target && e.target.id == 'choices') {
         if(e.target.innerText != questions[i].correct){
             time -= 10;
-            document.querySelector(".container").innerHTML = `
-                <p>WRONG</p>
-            `
         }else
             correctAns++;
         i++;
@@ -140,17 +137,22 @@ function finishQuiz() {
     });
 
     container.appendChild(scoreContainerEl);
-
-
 }
 
 // gets data from local storage and create list items to display scores
 function showHighScore() {
     document.querySelector('.banner').style.display = 'none';
 
-    var containerEl = document.querySelector(".container");
+    var containerEl = document.querySelector('.container');
+
     var highScoreEl = document.createElement('div');
     highScoreEl.className = "scores-container";
+
+    var scoreTitleEl = document.createElement('h1');
+    scoreTitleEl.innerHTML = "Highscore";
+
+
+
  
     var savedHighScores = JSON.parse(localStorage.getItem("allScores"));
     
@@ -169,11 +171,11 @@ function showHighScore() {
         listEl.className= "scoresList"
         listEl.textContent = savedHighScores[i].initials + " - " + savedHighScores[i].score + "%";
         highScoreEl.appendChild(listEl); 
-    }    
-    
+    }  
+
+    containerEl.appendChild(scoreTitleEl);
     containerEl.appendChild(highScoreEl);
 };
-
 
 // when the retake quiz button is clicked, it reloads the page
 document.querySelector('.retakeQuiz').addEventListener('click', 
@@ -188,5 +190,7 @@ document.querySelector('.clearHighScore').addEventListener("click", function () 
     localStorage.clear();
     location.reload();
 });
+
+
 
 
